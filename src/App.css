@@ -1,13 +1,5 @@
 .App {
   text-align: center;
-  background: url("./images/Background.png") repeat center center fixed;
-  background-size: cover;
-  position: relative;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .Link {
@@ -29,104 +21,28 @@ Button {
 Button:hover {
   background-color: aquamarine;
 }
-/* Login Page */
-
-.Login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid black;
-  margin-top: 10%;
-  margin-left: 30%;
-  margin-right: 30%;
-  padding: 15px;
-  background-color: rgba(243, 220, 245, 0.9);
-  
-}
-
-.LoginBtn {
-  height: 30px;
-  width: 170px;
-}
-
-
-.LoginBackground {
-  position:fixed;
-  padding:0;
-  margin:0;
-  top:0;
-  left:0;
-  background-image: url("./images/Loading1.png");
-  background-color: rgb(245, 245, 220,);
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
-/* NavBar */
-.Navbar {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  grid-template-rows: 46px;
-  list-style-type: none;
-  height: 40px;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(247, 247, 137, 0.3);
-  border: 3px solid darkcyan;
-  border-radius: 5px;
-}
-
-.NavLink {
-  cursor: pointer;
-  margin: 5px;
-  background-color: lightgreen;
-  border: 1px solid gray;
-  border-radius: 5px;
-  height: 30px;
-  width: 170px;
-}
-
-.NavLink:hover {
-  background-color: aquamarine;
-}
-
-.NavBarText {
-  margin-top: 8px;
-}
-
-#NavCollection {
-  grid-column: 1;
-  grid-row: 1;
-  justify-self: start;
-}
-#NavBoosterLink {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: start;
-}
-#NavBooster {
-  grid-column: 3;
-  grid-row: 1;
-  justify-self: end;
-}
-#NavCoins {
-  grid-column: 4;
-  grid-row: 1;
-  justify-self: end;
-}
-#NavUser {
-  grid-column: 5;
-  grid-row: 1;
-  justify-self: end;
-}
-#NavLogout {
-  grid-column: 6;
-  grid-row: 1;
-  justify-self: end;
-}
 
 /* Collection */
+
+.LoadScreen {
+  height: 100vh;
+  background: url("./images/CatnipDreamsCover1.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  animation: loadscreen 1s ease-in;
+}
+
+@keyframes loadscreen {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
 
 .CollectionContainer {
   width: 100%;
@@ -134,161 +50,12 @@ Button:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   border-radius: 5px;
 }
 
-/* Card */
-.CardTemplate {
-  position: relative;
-  background-size: cover;
-  margin: 15px;
-  height: 262px;
-  width: 186px;
-}
-
-.Common {
-  background-image: url("./images/DefaultCardCommon.png");
-}
-
-.Uncommon {
-  background-image: url("./images/DefaultCardUncommon.png");
-}
-
-.Rare {
-  background-image: url("./images/DefaultCardRare.png");
-}
-
-.CardTemplate:hover {
-  height: 283px;
-  width: 202px;
-  margin-left: 7px;
-  margin-right: 7px;
-  margin-bottom: -6px;
-}
-
-.CardTemplate:hover .CardName {
-  top: 1%;
-}
-
-.CardArtwork {
-  position: absolute;
-  top: 15.5%;
-  left: 11%;
-  height: 56.7%;
-}
-
-.CardName {
-  position: absolute;
-  top: 0.2%;
-  left: 13%;
-  font-size: 80%;
-}
-
-.CardDescription {
-  position: absolute;
-  bottom: 13%;
-  left: 13%;
-  font-size: 80%;
-}
-
-.CardRarity {
-  position: absolute;
-  bottom: 1.5%;
-  right: 26%;
-  font-size: 70%;
-}
-
-.CardId{
-  position: absolute;
-  bottom: 2%;
-  right: 11%;
-  font-size: 65%;
-}
-
-/* Booster */
-
-.Booster {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 100%;
-  padding: 5px;
-}
-
-.BoosterSideBar {
-  grid-column: 2;
-  margin: 5px;
-  border: 3px solid darkcyan;
-  border-radius: 5px;
-  background-color: rgba(247, 247, 137, 0.3);
-}
-
-.Boosterpack {
+.CollectionBtn {
   display: block;
-  height: 100px;
-  position: relative;
-  margin-top: 20px;
-  margin-left: 36%;
-}
-
-#Boostercount {
   height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: lightgreen;
-  border: 1px solid gray;
-  position: absolute;
-  margin-top: -23px;
-  margin-left: 14%;
-  z-index: 2;
-}
-
-.Coin {
-  display: block;
-  height: 50px;
-  position: relative;
-  margin-top: 14%;
-  margin-left: 38%;
-}
-
-#Coincount {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: lightgreen;
-  border: 1px solid gray;
-  position: absolute;
-  margin-top: -23px;
-  margin-left: 14%;
-  z-index: 2;
-}
-
-.BoosterContainer {
-  grid-column: 1;
-  grid-row-start: 1;
-}
-
-.BackCommon {
-  background-image: url("./images/DefaultCardBack.png");
-}
-
-.BackCommon:hover {
-  box-shadow: 10px 10px 10px #6dcff6, -10px -10px 10px #6dcff6;
-}
-
-.BackUncommon {
-  background-image: url("./images/DefaultCardBack.png");
-}
-
-.BackUncommon:hover {
-  box-shadow: 10px 10px 10px #a3d39c, -10px -10px 10px #a3d39c;
-}
-
-.BackRare {
-  background-image: url("./images/DefaultCardBack.png");
-}
-
-.BackRare:hover {
-  box-shadow: 10px 10px 10px #fdc68a, -10px -10px 10px #fdc68a;
+  width: 170px;
 }

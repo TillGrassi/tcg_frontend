@@ -7,7 +7,7 @@ import {
     REMOVE_BOOSTER
 } from "../actions/user";
 
-export default function userReducer(state = {authedUser: "Testuser", coins: 0, booster: 0}, action: { type: string; authedUser: string; coins: number; booster: number; }) {
+export default function userReducer(state = { authedUser: null, coins: 0, booster: 0 }, action: { type: string; authedUser: string; coins: number; booster: number; amount: number }) {
     switch (action.type) {
         case SET_AUTHED_USER:
             return {
@@ -26,7 +26,7 @@ export default function userReducer(state = {authedUser: "Testuser", coins: 0, b
         case ADD_COIN:
             return {
                 ...state,
-                coins: state.coins + 10,
+                coins: state.coins + action.amount,
             };
         case REMOVE_COIN:
             return {

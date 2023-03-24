@@ -1,4 +1,4 @@
-import Image from "../images/rare_1.png";
+
 export type CardProps = {
     info: {
         id: number,
@@ -7,15 +7,16 @@ export type CardProps = {
         description: string | null,
         rarity: string
     }
+    className?: string
 }
 
-const Card = ({info}: CardProps) => {
+const Card = ({info, className}: CardProps) => {
 
     const data = () => {
         return (
             <div>
                 <p className="CardName">{info.name}</p>
-                <img className="CardArtwork" src={Image} alt={`${info.name} Illustration`} />
+                <img className="CardArtwork" src={`http://localhost:8080/images/${info.image}.png`} alt={`${info.name} Illustration`} />
                 <p className="CardDescription">{info.description}</p>
                 <p className="CardRarity">{info.rarity}</p>
                 <p className="CardId">{`${info.id}/50`}</p> 

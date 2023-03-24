@@ -1,8 +1,9 @@
 import { connect } from "react-redux";
 import NavBar from "./NavBar";
 import Collection from "./Collection";
+import { useState } from "react";
 
-type FullProps = {
+export type FullProps = {
     userReducer: {
         authedUser: string,
         booster: number,
@@ -14,11 +15,20 @@ type FullProps = {
 }
 
 const Dashboard = () => {
+
+    
+    const [showDuplicates, setShowDuplicates] = useState(false);
+
+    const toggleDuplicates = () => {
+        setShowDuplicates(!showDuplicates);
+      };
+    
     return (
         <div>
-            <NavBar />
-            <Collection />
+            <NavBar showDuplicates = {showDuplicates} toggleDuplicates = {toggleDuplicates} />
+            <Collection showDuplicates = {showDuplicates}/>  
         </div>
+
     )
 }
 

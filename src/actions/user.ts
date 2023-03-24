@@ -11,7 +11,7 @@ type Init = {
   booster: number
 }
 
-export function setAuthedUser({authedUser, coins, booster}: Init) {
+export function setAuthedUser({ authedUser, coins, booster }: Init) {
   return {
     type: SET_AUTHED_USER,
     authedUser,
@@ -26,9 +26,10 @@ export function removeAuthedUser() {
   };
 }
 
-export function addCoin() {
+export function addCoin(amount: number) {
   return {
     type: ADD_COIN,
+    amount
   }
 }
 
@@ -43,6 +44,7 @@ export function addBooster() {
     type: ADD_BOOSTER,
   }
 }
+
 
 export function removeBooster() {
   return {

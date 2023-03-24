@@ -1,0 +1,126 @@
+/* Booster */
+
+
+
+.Booster {
+  width: 98%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: auto 20%;
+  padding: 5px;
+}
+
+.BoosterSideBar {
+  grid-column: 2;
+  margin: 5px;
+  border: 3px solid darkcyan;
+  border-radius: 5px;
+  background-color: rgba(247, 247, 137, 0.3);
+}
+
+.Boosterpack {
+  display: block;
+  height: 100px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 36%;
+}
+
+.BigBoosterpack {
+  height: 250px;
+  width: 146px;
+}
+
+.OpenBooster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.BoosterMoving {
+  animation: pulse 2s infinite;
+  margin-bottom: 43px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(253, 198, 138, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(253, 198, 138, 0.5);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(253, 198, 138, 0);
+  }
+}
+
+#Boostercount {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: lightgreen;
+  border: 1px solid gray;
+  position: absolute;
+  margin-top: -23px;
+  margin-left: 14%;
+  z-index: 2;
+}
+
+.Coin {
+  display: block;
+  height: 50px;
+  position: relative;
+  margin-top: 14%;
+  margin-left: 38%;
+}
+
+#Coincount {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: lightgreen;
+  border: 1px solid gray;
+  position: absolute;
+  margin-top: -23px;
+  margin-left: 14%;
+  z-index: 2;
+}
+
+.BoosterContainer {
+  grid-column: 1;
+  grid-row-start: 1;
+}
+
+.BackCommon {
+  background-image: url("./images/DefaultCardBack.png");
+  transform: rotateY(180deg);
+}
+
+.BackCommon:hover {
+  box-shadow: 10px 10px 10px #6dcff6, -10px -10px 10px #6dcff6;
+}
+
+.BackUncommon {
+  background-image: url("./images/DefaultCardBack.png");
+  transform: rotateY(180deg);
+}
+
+.BackUncommon:hover {
+  box-shadow: 10px 10px 10px #a3d39c, -10px -10px 10px #a3d39c;
+}
+
+.BackRare {
+  background-image: url("./images/DefaultCardBack.png");
+  transform: rotateY(180deg);
+}
+
+.BackRare:hover {
+  box-shadow: 10px 10px 10px #fdc68a, -10px -10px 10px #fdc68a;
+}

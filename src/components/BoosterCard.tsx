@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "../images/rare_1.png";
 export type CardProps = {
     info: {
         id: number,
@@ -23,7 +22,7 @@ const BoosterCard = ({info}: CardProps) => {
         return (
             <div>
                 <p className="CardName">{info.name}</p>
-                <img className="CardArtwork" src={Image} alt={`${info.name} Illustration`} />
+                <img className="CardArtwork" src={`http://localhost:8080/images/${info.image}.png`} alt={`${info.name} Illustration`} />
                 <p className="CardDescription">{info.description}</p>
                 <p className="CardRarity">{info.rarity}</p>
                 <p className="CardId">{`${info.id}/50`}</p> 
